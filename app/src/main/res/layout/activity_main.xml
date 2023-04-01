@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <TextView
         android:id="@+id/title"
@@ -34,44 +34,47 @@
         android:id="@+id/enter_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints="number"
         android:hint="@string/enter_value"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/counter_value"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
         app:layout_constraintBottom_toTopOf="@id/Reset"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/counter_value" />
 
     <Button
         android:id="@+id/Increase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_increase"
+        android:textColor="#1B5E20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/Reset"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/enter_value"
 
-      />
+        app:layout_constraintTop_toBottomOf="@id/enter_value" />
 
     <Button
         android:id="@+id/Reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_reset"
+        android:textColor="#1B5E20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/Decrease"
         app:layout_constraintStart_toEndOf="@id/Increase"
-        app:layout_constraintTop_toBottomOf="@id/enter_value"
-        />
+        app:layout_constraintTop_toBottomOf="@id/enter_value" />
 
     <Button
         android:id="@+id/Decrease"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_decrease"
+        android:textColor="#1B5E20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/Reset"
-        app:layout_constraintTop_toBottomOf="@id/enter_value"
-        />
+        app:layout_constraintTop_toBottomOf="@id/enter_value" />
 </androidx.constraintlayout.widget.ConstraintLayout>
