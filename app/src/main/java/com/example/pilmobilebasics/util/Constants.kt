@@ -1,6 +1,6 @@
 package com.example.pilmobilebasics.util
 
 object Constants {
-    const val Zero = 0
-    const val One = 1
+    const val ZERO = 0
+    const val ONE = 1
 }

@@ -1,23 +1,23 @@
 package com.example.pilmobilebasics.mvp.model
 
 import com.example.pilmobilebasics.mvp.contract.CountContract
-import com.example.pilmobilebasics.util.Constants.One
-import com.example.pilmobilebasics.util.Constants.Zero
+import com.example.pilmobilebasics.util.Constants.ONE
+import com.example.pilmobilebasics.util.Constants.ZERO
 
 class CountModel : CountContract.Model {
-    private var count = Zero
+    private var count = ZERO
 
     override fun getCount(): String = count.toString()
 
     override fun increase() {
-        count += One
+        count += ONE
     }
 
     override fun reset() {
-        count = Zero
+        count = ZERO
     }
 
     override fun decrease() {
-        count -= One
+        count -= ONE
     }
 }
