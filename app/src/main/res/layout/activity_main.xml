@@ -8,27 +8,31 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/green_pear"
+        android:gravity="center"
         android:text="@string/title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimenTitle"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/counter_value"
-        app:layout_constraintTop_toTopOf="parent"
-    />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/counter_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/counter_value"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        android:textSize="@dimen/dimenCounter"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/enter_value"
-
-
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
     <EditText
         android:id="@+id/enter_value"
@@ -37,8 +41,8 @@
         android:autofillHints="number"
         android:hint="@string/enter_value"
         android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="#757575"
+        android:textColorHint="#78909C"
+        android:textSize="@dimen/dimenSubtitle"
         app:layout_constraintBottom_toTopOf="@id/Reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,11 +53,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_increase"
-        android:textColor="#1B5E20"
+        android:textColor="@color/colorTextButton"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/Reset"
-        app:layout_constraintStart_toStartOf="parent"
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Reset"
         app:layout_constraintTop_toBottomOf="@id/enter_value" />
 
     <Button
@@ -61,7 +65,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_reset"
-        android:textColor="#1B5E20"
+        android:textColor="@color/colorTextButton"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/Decrease"
         app:layout_constraintStart_toEndOf="@id/Increase"
@@ -72,9 +77,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_decrease"
-        android:textColor="#1B5E20"
+        android:textColor="@color/colorTextButton"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/Reset"
+        app:layout_constraintEnd_toStartOf="@id/Reset"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/enter_value" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
